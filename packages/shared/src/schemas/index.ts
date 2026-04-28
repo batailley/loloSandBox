@@ -17,3 +17,6 @@ export const PingResponseSchema = z.object({
   echo: z.string().optional(),
 });
 export type PingResponse = z.infer<typeof PingResponseSchema>;
+
+export * from './host';
+export * from './helloworld';

@@ -1,6 +1,12 @@
 import {
   type HealthResponse,
   HealthResponseSchema,
+  type HelloWorldGreeting,
+  HelloWorldGreetingSchema,
+  type HostFeatures,
+  HostFeaturesSchema,
+  type HostMe,
+  HostMeSchema,
   type PingResponse,
   PingResponseSchema,
 } from '@lolo/shared/schemas';
@@ -24,4 +30,14 @@ export const fetchHealth = (): Promise<HealthResponse> => json('/health', Health
 export const fetchPing = (echo?: string): Promise<PingResponse> => {
   const qs = echo ? `?echo=${encodeURIComponent(echo)}` : '';
   return json(`/ping${qs}`, PingResponseSchema);
+};
+
+export const fetchHostMe = (): Promise<HostMe> => json('/apiv1/host/me', HostMeSchema);
+
+export const fetchHostFeatures = (): Promise<HostFeatures> =>
+  json('/apiv1/host/features', HostFeaturesSchema);
+
+export const fetchHelloWorldGreeting = (name?: string): Promise<HelloWorldGreeting> => {
+  const qs = name ? `?name=${encodeURIComponent(name)}` : '';
+  return json(`/apiv1/helloworld/greeting${qs}`, HelloWorldGreetingSchema);
 };
