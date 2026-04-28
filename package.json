@@ -2,13 +2,9 @@
   "name": "lolosandbox",
   "version": "0.0.0",
   "private": true,
-  "description": "Monorepo d'expérimentations (apps, BFF, libs, UI kit) — TypeScript + Bun + Nx",
+  "description": "Monorepo d'expérimentations (apps, BFF, libs, UI kit) — TypeScript + pnpm + Nx",
   "type": "module",
-  "packageManager": "bun@1.1.34",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
+  "packageManager": "pnpm@10.11.0",
   "scripts": {
     "build": "nx run-many -t build",
     "dev": "nx run-many -t dev --parallel=10",
@@ -18,17 +14,17 @@
     "typecheck": "nx run-many -t typecheck",
     "test": "nx run-many -t test",
     "graph": "nx graph",
-    "clean": "rm -rf node_modules **/node_modules **/dist **/.turbo .nx"
+    "clean": "rm -rf node_modules **/node_modules **/dist .nx"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@types/bun": "^1.1.13",
-    "@types/node": "^22.9.0",
+    "@types/node": "^24.0.0",
     "nx": "^20.1.2",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
+    "vitest": "^3.2.0"
   },
   "engines": {
-    "bun": ">=1.1.0",
-    "node": ">=20"
+    "node": ">=24",
+    "pnpm": ">=10"
   }
 }

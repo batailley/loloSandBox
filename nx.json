@@ -14,8 +14,7 @@
     "sharedGlobals": [
       "{workspaceRoot}/biome.json",
       "{workspaceRoot}/tsconfig.base.json",
-      "{workspaceRoot}/bun.lockb",
-      "{workspaceRoot}/bun.lock"
+      "{workspaceRoot}/pnpm-lock.yaml"
     ]
   },
   "targetDefaults": {
