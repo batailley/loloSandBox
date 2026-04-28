@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Design tokens du kit UI.
+ * Les variables sont en HSL pour permettre l'usage de <alpha-value> par Tailwind.
+ */
+@layer base {
+  :root {
+    --bg: 0 0% 100%;
+    --fg: 240 10% 4%;
+
+    --muted: 240 5% 96%;
+    --muted-fg: 240 4% 46%;
+
+    --primary: 240 6% 10%;
+    --primary-fg: 0 0% 98%;
+
+    --destructive: 0 72% 51%;
+    --destructive-fg: 0 0% 98%;
+
+    --border: 240 6% 90%;
+    --ring: 240 6% 10%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --bg: 240 10% 4%;
+    --fg: 0 0% 98%;
+
+    --muted: 240 4% 16%;
+    --muted-fg: 240 5% 65%;
+
+    --primary: 0 0% 98%;
+    --primary-fg: 240 6% 10%;
+
+    --destructive: 0 63% 31%;
+    --destructive-fg: 0 0% 98%;
+
+    --border: 240 4% 16%;
+    --ring: 240 5% 84%;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}

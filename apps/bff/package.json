@@ -1,0 +1,26 @@
+{
+  "name": "@lolo/bff",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Backend-for-Frontend (Hono + Bun)",
+  "type": "module",
+  "main": "./src/index.ts",
+  "scripts": {
+    "dev": "bun run --hot src/index.ts",
+    "start": "bun run src/index.ts",
+    "build": "bun build ./src/index.ts --outdir ./dist --target bun --minify",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.4.1",
+    "@lolo/shared": "workspace:*",
+    "hono": "^4.6.10",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@lolo/tsconfig": "workspace:*",
+    "@types/bun": "^1.1.13",
+    "typescript": "^5.6.3"
+  }
+}

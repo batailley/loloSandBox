@@ -1,0 +1,9 @@
+{
+  "extends": "@lolo/tsconfig/react.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "types": ["vite/client", "react", "react-dom"]
+  },
+  "include": ["src/**/*", "vite.config.ts"],
+  "exclude": ["dist", "node_modules"]
+}

@@ -1,0 +1,16 @@
+# Configuration Bun pour le monorepo
+# Cf. https://bun.sh/docs/runtime/bunfig
+
+[install]
+# Hoist toutes les deps à la racine pour profiter du cache
+exact = false
+# Use le linker "isolated" pour éviter les conflits de versions entre workspaces
+# Décommenter si besoin : linker = "isolated"
+
+[install.scopes]
+# Ajouter ici registre privé si besoin
+
+[test]
+# Coverage ignore les dossiers générés
+coverage = false
+coverageSkipTestFiles = true

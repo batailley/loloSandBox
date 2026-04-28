@@ -1,0 +1,30 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "bff",
+  "projectType": "application",
+  "sourceRoot": "apps/bff/src",
+  "targets": {
+    "dev": {
+      "executor": "nx:run-script",
+      "options": { "script": "dev" }
+    },
+    "start": {
+      "executor": "nx:run-script",
+      "options": { "script": "start" }
+    },
+    "build": {
+      "executor": "nx:run-script",
+      "options": { "script": "build" },
+      "outputs": ["{projectRoot}/dist"]
+    },
+    "typecheck": {
+      "executor": "nx:run-script",
+      "options": { "script": "typecheck" }
+    },
+    "test": {
+      "executor": "nx:run-script",
+      "options": { "script": "test" }
+    }
+  },
+  "tags": ["scope:bff", "type:app"]
+}
