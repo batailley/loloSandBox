@@ -6,13 +6,14 @@
   "type": "module",
   "main": "./src/index.ts",
   "scripts": {
-    "dev": "tsx watch src/index.ts",
-    "start": "tsx src/index.ts",
+    "dev": "node --env-file=.env --import=tsx/esm --watch src/index.ts",
+    "start": "node --env-file=.env --import=tsx/esm src/index.ts",
     "build": "tsup ./src/index.ts --outDir ./dist --format esm --minify",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "vitest run"
   },
   "dependencies": {
+    "@hono/node-server": "^2.0.0",
     "@hono/zod-validator": "^0.4.1",
     "@lolo/shared": "workspace:*",
     "hono": "^4.6.10",

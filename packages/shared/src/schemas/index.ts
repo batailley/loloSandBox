@@ -20,3 +20,4 @@ export type PingResponse = z.infer<typeof PingResponseSchema>;
 
 export * from './host';
 export * from './helloworld';
+export * from './anytype';
